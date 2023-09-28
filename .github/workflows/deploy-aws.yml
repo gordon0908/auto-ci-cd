@@ -21,7 +21,9 @@ jobs:
         aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         application_name: react-home-app
         environment_name: React-home-app-env
-        version_label: 12345
+        version_label: ${{ github.run_number }}
+        version_description: version dynamic
         existing_bucket_name: elasticbeanstalk-us-east-1-351567199726
+        use_existing_version_if_available: true
         region: us-east-1
         deployment_package: deploy.zip
